@@ -9,7 +9,11 @@
 流程：抓取 RSS → 去重 → LLM 四维评分 → 双轨配额选取 → 主编一句话 → 渲染 HTML 日报页 + 更新存档索引
 """
 import argparse, json, os, re, sys, time
-from datetime import datetime, date
+from datetime import datetime, date, timezone, timedelta
+
+def bj_today():
+    """按北京时间取日期（GitHub Actions 跑在 UTC，直接 date.today() 会差一天）"""
+    return datetime.now(timezone(timedelta(hours=8))).date()
 from pathlib import Path
 
 import feedparser  # pip install feedparser pyyaml requests
@@ -222,8 +226,8 @@ def main():
 
     print("⑥ 渲染…")
     rejected_sample = rejected[:2]
-    html = render_html(picked, oneliner, rejected_sample, date.today())
-    fname = OUT / f"{date.today().isoformat()}.html"
+    html = render_html(picked, oneliner, rejected_sample, bj_today())
+    fname = OUT / f"{bj_today().isoformat()}.html"
     fname.write_text(html, encoding="utf-8")
     print(f"   已生成 {fname}")
     update_index()
