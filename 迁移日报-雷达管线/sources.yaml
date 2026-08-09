@@ -1,0 +1,62 @@
+# 迁移日报 · 信源清单 v0.1
+# 每条信源：name / url / type（论文|榜单|官方|社区|一手案例|法规|相邻）/ topics（倾向主题，仅提示不做过滤）
+# 规则：信源只影响覆盖面，不保证入选；关闭=30天冷宫而非删除
+
+sources:
+  # ── 论文 / 预印本 ──
+  - name: arXiv cs.CV 新论文
+    url: https://export.arxiv.org/rss/cs.CV
+    type: 论文
+    topics: [能力边界, 评测与可靠性]
+  - name: arXiv cs.MM 新论文
+    url: https://export.arxiv.org/rss/cs.MM
+    type: 论文
+    topics: [能力边界, 评测与可靠性]
+  - name: arXiv cs.AI 新论文
+    url: https://export.arxiv.org/rss/cs.AI
+    type: 论文
+    topics: [评测与可靠性, 应用构建与采用]
+  - name: arXiv cs.HC 人机交互
+    url: https://export.arxiv.org/rss/cs.HC
+    type: 论文
+    topics: [相邻领域]
+  - name: arXiv cs.RO 机器人
+    url: https://export.arxiv.org/rss/cs.RO
+    type: 论文
+    topics: [相邻领域]
+
+  # ── 榜单 / 评测 ──
+  - name: Hugging Face Trending Papers
+    url: https://huggingface.co/papers/rss
+    type: 榜单
+    topics: [能力边界, 评测与可靠性]
+
+  # ── 官方技术博客（RSSHub 路由，按需部署后替换） ──
+  # - name: OpenAI Blog
+  #   url: https://rsshub.app/openai/blog
+  #   type: 官方
+  #   topics: [能力边界, 应用构建与采用]
+
+  # ── 社区 / 一手案例 ──
+  - name: Hacker News 首页
+    url: https://hnrss.org/frontpage
+    type: 社区
+    topics: [应用构建与采用, 相邻领域]
+
+  # ── 相邻领域 ──
+  - name: IEEE Spectrum Robotics
+    url: https://spectrum.ieee.org/feeds/topic/robotics.rss
+    type: 相邻
+    topics: [相邻领域]
+
+# 去重规则：同一公司/模型/新闻类型，一天最多 2 条
+dedup:
+  same_entity_max_per_day: 2
+
+# 每日配额（双轨）
+quota:
+  能力边界_评测与可靠性: 2        # A+B 合并池
+  质量现场_应用采用: [1, 2]        # C+D 合并池
+  商业岗位与规则: [0, 1]           # E
+  相邻领域: 1                      # F
+  total: [4, 7]
