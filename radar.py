@@ -31,7 +31,7 @@ OUT.mkdir(exist_ok=True)
 # ───────────────────────── 配置 ─────────────────────────
 LLM_BASE_URL = os.environ.get("LLM_BASE_URL", "https://api.moonshot.cn/v1")
 LLM_API_KEY  = os.environ.get("MOONSHOT_API_KEY") or os.environ.get("LLM_API_KEY", "")
-LLM_MODEL    = os.environ.get("LLM_MODEL", "kimi-k2.5")
+LLM_MODEL    = os.environ.get("LLM_MODEL", "kimi-k3")
 
 TOPIC_POOL = {
     "A": ("能力边界", "能力边界_评测与可靠性"),
@@ -92,7 +92,8 @@ def llm(system, user, json_mode=True):
     """OpenAI 兼容调用；返回解析后的 JSON 或原文"""
     if not LLM_API_KEY:
         raise RuntimeError("未设置 MOONSHOT_API_KEY / LLM_API_KEY")
-    body = {"model": LLM_MODEL, "temperature": 0.2,
+    # 不传 temperature：K3/K2.6 等新模型为固定采样，显式传参会直接 400
+    body = {"model": LLM_MODEL,
             "messages": [{"role": "system", "content": system},
                          {"role": "user", "content": user}]}
     if json_mode:
@@ -210,6 +211,17 @@ def main():
     args = ap.parse_args()
 
     print("① 载入信源…"); cfg = load_sources()
+
+    if not args.mock:
+        print("⓪ LLM 自检…")
+        try:
+            llm("只输出一个 JSON：{\"ok\":true}", "ping")
+            print(f"   ✓ {LLM_MODEL} 可用")
+        except Exception as ex:
+            print(f"   ✗ LLM 自检失败：{ex}")
+            print("   流水线中止（宁可任务红色报警，也不发布空日报）。请检查模型名/API key/余额。")
+            sys.exit(1)
+
     print("② 抓取…"); items = fetch_items(cfg, args.hours)
     print(f"   去重后 {len(items)} 条候选")
     if not items: print("今日无候选，结束。"); return
