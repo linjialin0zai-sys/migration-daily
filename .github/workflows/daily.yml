@@ -1,0 +1,42 @@
+# 迁移日报 · 每日自动管线
+# 每天北京时间 07:10（UTC 23:10 前一天）自动跑，产出当日日报并提交回仓库
+name: migration-daily
+
+on:
+  schedule:
+    - cron: "10 23 * * *"   # UTC 23:10 = 北京时间 07:10
+  workflow_dispatch:        # 允许在 Actions 页手动触发一次
+
+permissions:
+  contents: write
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 安装依赖
+        run: pip install feedparser pyyaml requests
+
+      - name: 跑雷达管线
+        env:
+          MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+          # 如需换模型/换服务商，在这里改：
+          # LLM_MODEL: kimi-k2-0711-preview
+          # LLM_BASE_URL: https://api.moonshot.cn/v1
+        run: python3 radar.py
+
+      - name: 提交当日日报
+        run: |
+          mkdir -p docs
+          cp output/*.html docs/
+          git config user.name "migration-radar-bot"
+          git config user.email "radar@users.noreply.github.com"
+          git add output/ docs/
+          git commit -m "日报 $(date +%F)" || echo "今日无新增内容"
+          git push
