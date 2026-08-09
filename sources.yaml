@@ -25,17 +25,31 @@ sources:
     type: 论文
     topics: [相邻领域]
 
-  # ── 榜单 / 评测 ──
-  - name: Hugging Face Trending Papers
-    url: https://huggingface.co/papers/rss
-    type: 榜单
-    topics: [能力边界, 评测与可靠性]
-
-  # ── 官方技术博客（RSSHub 路由，按需部署后替换） ──
-  # - name: OpenAI Blog
-  #   url: https://rsshub.app/openai/blog
-  #   type: 官方
-  #   topics: [能力边界, 应用构建与采用]
+  # ── 科技媒体（一手报道 / 深度分析） ──
+  - name: The Verge
+    url: https://www.theverge.com/rss/index.xml
+    type: 一手案例
+    topics: [应用构建与采用, 商业、岗位与规则]
+  - name: Ars Technica
+    url: https://feeds.arstechnica.com/arstechnica/index
+    type: 一手案例
+    topics: [能力边界, 商业、岗位与规则, 相邻领域]
+  - name: MIT 科技评论
+    url: https://www.technologyreview.com/feed/
+    type: 一手案例
+    topics: [能力边界, 评测与可靠性, 相邻领域]
+  - name: 量子位
+    url: https://www.qbitai.com/feed
+    type: 一手案例
+    topics: [能力边界, 内容生产与质量现场, 商业、岗位与规则]
+  - name: 爱范儿
+    url: https://www.ifanr.com/feed
+    type: 一手案例
+    topics: [应用构建与采用, 相邻领域]
+  - name: 少数派
+    url: https://sspai.com/feed
+    type: 社区
+    topics: [内容生产与质量现场, 应用构建与采用]
 
   # ── 社区 / 一手案例 ──
   - name: Hacker News 首页
