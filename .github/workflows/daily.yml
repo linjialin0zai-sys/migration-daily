@@ -29,7 +29,7 @@ jobs:
           # 如需换模型/换服务商，在这里改：
           # LLM_MODEL: kimi-k2-0711-preview
           # LLM_BASE_URL: https://api.moonshot.cn/v1
-        run: python3 radar.py
+        run: python3 radar.py --hours 48
 
       - name: 提交当日日报
         run: |
