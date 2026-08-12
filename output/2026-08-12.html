@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>今日雷达 · 2026-08-12</title>
+<style>
+:root{--bg:#060608;--card:#0f0f14;--line:#222228;--line-soft:#1a1a20;--text:#eef0f2;--text2:#a9afb7;--text3:#62676f;
+--cyan:#00f0ff;--cyan-dim:rgba(0,240,255,.09);--magenta:#ff2d78;--magenta-dim:rgba(255,45,120,.11);
+--serif:"Noto Serif SC","Songti SC",serif;--sans:"PingFang SC","Microsoft YaHei",sans-serif;--mono:monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.75;max-width:720px;margin:0 auto;padding:40px 20px 80px}
+.kicker{font-size:11px;letter-spacing:.4em;color:var(--cyan);margin-bottom:14px}
+h1{font-family:var(--serif);font-size:34px;text-shadow:-2.5px 0 rgba(255,45,120,.5),2.5px 0 rgba(0,240,255,.5)}
+.meta{margin:14px 0 30px;font-size:13px;color:var(--text3)}
+.hero{border-radius:16px;padding:1px;background:linear-gradient(120deg,rgba(0,240,255,.55),rgba(255,45,120,.4));margin-bottom:44px}
+.hero-in{background:#0a0a0f;border-radius:15px;padding:20px 22px}
+.hero-in .t{font-size:11px;letter-spacing:.3em;color:var(--cyan);margin-bottom:8px}
+.hero-in p{font-family:var(--serif);font-size:17px}
+.sec{margin-top:40px}
+.sec h2{font-family:var(--serif);font-size:19px;border-bottom:1px solid var(--line-soft);padding-bottom:8px;margin-bottom:16px}
+.sec h2 .n{font-family:var(--mono);color:var(--cyan);font-size:13px;margin-right:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.top{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;align-items:center}
+.topic{font-size:11px;padding:2px 10px;border-radius:99px;border:1px solid #3a3a44}
+.angle{font-size:10px;padding:2px 8px;border-radius:99px;color:var(--cyan);border:1px solid rgba(0,240,255,.3)}
+.angle.contra{color:var(--magenta);border-color:rgba(255,45,120,.45);background:var(--magenta-dim)}
+.src{font-size:12px;color:var(--cyan);margin-left:auto;text-decoration:none;border-bottom:1px dashed rgba(0,240,255,.35)}
+h3{font-family:var(--serif);font-size:17px;margin-bottom:12px;line-height:1.6}
+.row{display:grid;grid-template-columns:76px 1fr;gap:4px 14px;font-size:14px;margin-bottom:9px}
+.k{color:var(--text3);font-size:11px;letter-spacing:.12em;padding-top:4px;white-space:nowrap}
+.v{color:var(--text2)}
+.v i{color:var(--magenta);font-style:normal}
+.conn{display:inline-block;font-size:10px;padding:1px 8px;border-radius:99px;color:var(--cyan);border:1px solid rgba(0,240,255,.35);margin-right:5px}
+.skip{border:1px dashed var(--line);border-radius:12px;padding:14px 18px;font-size:13px;color:var(--text2);margin-bottom:10px}
+.skip .r{display:block;font-size:12px;color:var(--text3);margin-top:4px}
+/* ── 双轨凭证 ── */
+.dual{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);font-size:12px;color:var(--text2)}
+.dual b{color:var(--cyan);font-weight:600}
+.dual .mg b{color:var(--magenta)}
+/* ── 卡片交互（一级：本设备 localStorage） ── */
+.ops{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;padding-top:12px;border-top:1px dashed var(--line-soft)}
+.op-btn{font-size:12px;color:var(--text2);background:none;border:1px solid var(--line);border-radius:99px;
+  padding:6px 12px;min-height:36px;cursor:pointer;transition:all .15s;font-family:var(--sans)}
+.op-btn:hover{border-color:#3a3a44;color:var(--text)}
+.op-btn.on{color:var(--cyan);border-color:rgba(0,240,255,.45);background:var(--cyan-dim)}
+.op-btn.calib-tg{margin-left:auto;color:var(--text3)}
+.card.muted{opacity:.38;transition:opacity .2s}
+.calib{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.calib-in{padding:12px 2px 2px;display:flex;gap:8px;flex-wrap:wrap}
+.calib .lbl{width:100%;font-size:11px;color:var(--text3);letter-spacing:.1em}
+.chip{font-size:11px;color:var(--text2);border:1px solid var(--line);border-radius:99px;padding:5px 11px;
+  cursor:pointer;background:none;font-family:var(--sans)}
+.chip.on{color:var(--cyan);border-color:rgba(0,240,255,.45);background:var(--cyan-dim)}
+footer{margin-top:50px;padding-top:20px;border-top:1px solid var(--line-soft);font-size:12px;color:var(--text3)}
+@media(max-width:560px){.row{grid-template-columns:1fr}.src{margin-left:0;flex-basis:100%}}
+</style></head><body>
+<div class="kicker">MIGRATION DAILY · 今日雷达</div>
+<h1>今日雷达</h1>
+<div class="meta">2026-08-12 · 入选 5 条</div>
+<div class="hero"><div class="hero-in"><div class="t">今日一句话</div><p>今天没有足以改变视野边界的重大新信号。</p><div class="dual"><span>双轨凭证：深耕 <b>4</b> / 扩展 <b>1</b></span><span class="mg">反例角度 <b>3</b></span><span>原始来源率 <b>100%</b></span></div></div></div>
+<div class="sec"><h2><span class="n">01</span>能力边界 · 评测与可靠性</h2>
+<div class="card">
+  <div class="top">
+    <span class="topic">评测与可靠性</span><span class="angle">方法变化</span><span class="angle">失败与边界</span><span class="angle contra">反例与挑战</span>
+    <a class="src" href="https://arxiv.org/abs/2608.07550">论文（34.5万+条finding级实证评测） · 2026-08-11 ↗</a>
+  </div>
+  <h3>三机构胸片语料审计：VLM与参考标准的一致性难跨站点迁移</h3>
+  <div class="row"><span class="k">为什么值得看</span><span class="v">在34.5万条finding级判断上实测三款生成式VLM：接口不暴露置信度时，与机构参考标准的一致性随站点、征象、提问方式变化，单次判断可信度无法直接读出。</span></div>
+  <div class="row"><span class="k">与我的可能连接</span><span class="v"><span class="conn">工作</span><span class="conn">写作</span><span class="conn">认知扩展</span>这套&#x27;参考一致性是否跨站点/提问方式迁移&#x27;的审计框架，可能可借用到内容质量rubric的跨团队校准与置信度缺失场景，方法细节值得追踪。</span></div>
+  <div class="row"><span class="k">打开的问题</span><span class="v"><i>模型不暴露置信度时，评测协议本身能否替代置信度成为信任依据？挑战了&#x27;基准一致性可跨场景直接迁移&#x27;的默认假设。</i></span></div>
+  <div class="ops" data-cid="e714d4d618">
+    <button class="op-btn" data-op="fav">☆ 收藏</button>
+    <button class="op-btn" data-op="spark">✎ 线索</button>
+    <button class="op-btn" data-op="track">⌖ 追踪</button>
+    <button class="op-btn" data-op="muted">✕ 忽略</button>
+    <button class="op-btn calib-tg">校准这条 ▸</button>
+  </div>
+  <div class="calib"><div class="calib-in">
+    <span class="lbl">这条为什么不对（点选，帮助明天调准）</span>
+    <button class="chip" data-tag="太宽泛">太宽泛</button><button class="chip" data-tag="与我无关">与我无关</button><button class="chip" data-tag="我已经知道">我已经知道</button><button class="chip" data-tag="证据不够">证据不够</button><button class="chip" data-tag="想要更多此类">想要更多此类</button>
+  </div></div>
+</div>
+<div class="card">
+  <div class="top">
+    <span class="topic">评测与可靠性</span><span class="angle">失败与边界</span><span class="angle">方法变化</span><span class="angle contra">反例与挑战</span>
+    <a class="src" href="https://arxiv.org/abs/2608.07895">论文 · 2026-08-11 ↗</a>
+  </div>
+  <h3>机器人示教数据存在&#x27;轨迹对但指令错&#x27;的隐蔽错配，论文提出免训练审计框架MMPF</h3>
+  <div class="row"><span class="k">为什么值得看</span><span class="v">定义了&#x27;行为正确、指令错配&#x27;这一隐蔽数据失败模式，并给出免训练的多模态概率融合审计方法，让数据质量从剔除失败样本升级为逐条检测配对一致性</span></div>
+  <div class="row"><span class="k">与我的可能连接</span><span class="v"><span class="conn">工作</span><span class="conn">写作</span><span class="conn">认知扩展</span>你在多模态数据评测中遇到的&#x27;单条成立、配对错位&#x27;问题可能与ITM同源，其&#x27;模态即专家&#x27;的免训练审计思路值得追踪借鉴</span></div>
+  <div class="row"><span class="k">打开的问题</span><span class="v"><i>它挑战了&#x27;剔除失败rollout=数据干净&#x27;的默认假设——看起来对的数据也可能污染模型，质量把关是否需要从抽检转向逐条审计？</i></span></div>
+  <div class="ops" data-cid="8818ba5de6">
+    <button class="op-btn" data-op="fav">☆ 收藏</button>
+    <button class="op-btn" data-op="spark">✎ 线索</button>
+    <button class="op-btn" data-op="track">⌖ 追踪</button>
+    <button class="op-btn" data-op="muted">✕ 忽略</button>
+    <button class="op-btn calib-tg">校准这条 ▸</button>
+  </div>
+  <div class="calib"><div class="calib-in">
+    <span class="lbl">这条为什么不对（点选，帮助明天调准）</span>
+    <button class="chip" data-tag="太宽泛">太宽泛</button><button class="chip" data-tag="与我无关">与我无关</button><button class="chip" data-tag="我已经知道">我已经知道</button><button class="chip" data-tag="证据不够">证据不够</button><button class="chip" data-tag="想要更多此类">想要更多此类</button>
+  </div></div>
+</div></div><div class="sec"><h2><span class="n">02</span>质量现场 · 应用采用</h2>
+<div class="card">
+  <div class="top">
+    <span class="topic">应用构建与采用</span><span class="angle">方法变化</span><span class="angle">失败与边界</span>
+    <a class="src" href="https://arxiv.org/abs/2608.07541">论文 · 2026-08-11 ↗</a>
+  </div>
+  <h3>NeuroPilot：多智能体把神经影像处理与QC经验封装为LLM技能</h3>
+  <div class="row"><span class="k">为什么值得看</span><span class="v">将依赖项目脚本、环境调参和人工QC的影像管线，改造为三个LLM可调用技能驱动的智能体流程，展示专家手感如何被数字化进真实工作流。</span></div>
+  <div class="row"><span class="k">与我的可能连接</span><span class="v"><span class="conn">工作</span><span class="conn">写作</span><span class="conn">长期迁移</span><span class="conn">认知扩展</span>可能为「手感迁移」提供跨领域样本：QC专家经验如何被拆解为可调用技能；值得追踪其在真实数据上的验收与失败处理方式。</span></div>
+  <div class="row"><span class="k">打开的问题</span><span class="v">当QC判断被交给智能体，错误归因、人工复核边界与质量责任该如何设计？</span></div>
+  <div class="ops" data-cid="aff30bb845">
+    <button class="op-btn" data-op="fav">☆ 收藏</button>
+    <button class="op-btn" data-op="spark">✎ 线索</button>
+    <button class="op-btn" data-op="track">⌖ 追踪</button>
+    <button class="op-btn" data-op="muted">✕ 忽略</button>
+    <button class="op-btn calib-tg">校准这条 ▸</button>
+  </div>
+  <div class="calib"><div class="calib-in">
+    <span class="lbl">这条为什么不对（点选，帮助明天调准）</span>
+    <button class="chip" data-tag="太宽泛">太宽泛</button><button class="chip" data-tag="与我无关">与我无关</button><button class="chip" data-tag="我已经知道">我已经知道</button><button class="chip" data-tag="证据不够">证据不够</button><button class="chip" data-tag="想要更多此类">想要更多此类</button>
+  </div></div>
+</div>
+<div class="card">
+  <div class="top">
+    <span class="topic">应用构建与采用</span><span class="angle">方法变化</span><span class="angle">能力变化</span><span class="angle">失败与边界</span>
+    <a class="src" href="https://arxiv.org/abs/2608.07651">论文 · 2026-08-11 ↗</a>
+  </div>
+  <h3>Agent框架让LLM函数调用专科视觉模型做青光眼检测，缓解幻觉与结果波动</h3>
+  <div class="row"><span class="k">为什么值得看</span><span class="v">把图像质量评估、青光眼分类、视盘分割拆成专科模型工具由LLM编排调用，给出一条用系统集成换可靠性的具体路径，并做任务级验证。</span></div>
+  <div class="row"><span class="k">与我的可能连接</span><span class="v"><span class="conn">工作</span><span class="conn">写作</span><span class="conn">认知扩展</span>&#x27;LLM编排+专科工具&#x27;的结构可能与内容质量评测流水线同构，值得追踪其错误归因方式，或可为&#x27;手感迁移&#x27;提供医疗场景的写作案例。</span></div>
+  <div class="row"><span class="k">打开的问题</span><span class="v">通用LLM与专科工具分工时，可靠性边界如何划分与验收？医疗级的验证标准能否迁移到内容质量评测？</span></div>
+  <div class="ops" data-cid="0ae4ceca42">
+    <button class="op-btn" data-op="fav">☆ 收藏</button>
+    <button class="op-btn" data-op="spark">✎ 线索</button>
+    <button class="op-btn" data-op="track">⌖ 追踪</button>
+    <button class="op-btn" data-op="muted">✕ 忽略</button>
+    <button class="op-btn calib-tg">校准这条 ▸</button>
+  </div>
+  <div class="calib"><div class="calib-in">
+    <span class="lbl">这条为什么不对（点选，帮助明天调准）</span>
+    <button class="chip" data-tag="太宽泛">太宽泛</button><button class="chip" data-tag="与我无关">与我无关</button><button class="chip" data-tag="我已经知道">我已经知道</button><button class="chip" data-tag="证据不够">证据不够</button><button class="chip" data-tag="想要更多此类">想要更多此类</button>
+  </div></div>
+</div></div><div class="sec"><h2><span class="n">04</span>相邻领域</h2>
+<div class="card">
+  <div class="top">
+    <span class="topic">相邻领域</span><span class="angle">方法变化</span><span class="angle contra">反例与挑战</span>
+    <a class="src" href="https://arxiv.org/abs/2608.08349">论文（系统型，arXiv原文） · 2026-08-11 ↗</a>
+  </div>
+  <h3>Dramarrator：面向小说改编广播剧的对象化音频编辑工具</h3>
+  <div class="row"><span class="k">为什么值得看</span><span class="v">把角色、场景等故事元素抽象为对象，改动自动联动到对白、音效、音乐等互依赖资产，直指生成后&#x27;改一处、动全身&#x27;的维护成本。</span></div>
+  <div class="row"><span class="k">与我的可能连接</span><span class="v"><span class="conn">工作</span><span class="conn">写作</span><span class="conn">认知扩展</span>可能与你在多模态内容工作流中遇到的&#x27;改动连锁&#x27;痛点相关；对象化表示思路值得追踪，看能否迁到视频资产或评测项的结构化管理。</span></div>
+  <div class="row"><span class="k">打开的问题</span><span class="v"><i>挑战&#x27;端到端一键生成&#x27;叙事：若真实劳动在生成后的联动维护，创作工具的评估指标该从生成质量改成什么？</i></span></div>
+  <div class="ops" data-cid="0e5ceb92af">
+    <button class="op-btn" data-op="fav">☆ 收藏</button>
+    <button class="op-btn" data-op="spark">✎ 线索</button>
+    <button class="op-btn" data-op="track">⌖ 追踪</button>
+    <button class="op-btn" data-op="muted">✕ 忽略</button>
+    <button class="op-btn calib-tg">校准这条 ▸</button>
+  </div>
+  <div class="calib"><div class="calib-in">
+    <span class="lbl">这条为什么不对（点选，帮助明天调准）</span>
+    <button class="chip" data-tag="太宽泛">太宽泛</button><button class="chip" data-tag="与我无关">与我无关</button><button class="chip" data-tag="我已经知道">我已经知道</button><button class="chip" data-tag="证据不够">证据不够</button><button class="chip" data-tag="想要更多此类">想要更多此类</button>
+  </div></div>
+</div></div>
+<div class="sec"><h2><span class="n">05</span>今日拦截抽样</h2><div class="skip">✕ XEns-CKD: An Explainable Ensemble-Based Approach for Chronic Kidney Disease Stage Detection<span class="r">原因：距离过远且证据弱：常规医学影像集成论文，私有数据集不可复现，无可追踪的可靠性/评测方法创新</span></div><div class="skip">✕ A Review of Vision-Based Vehicle Detection for UAV-Based Traffic Monitoring: Experimental Insights and Future Directions<span class="r">原因：距离过远：无人机交通车辆检测的文献综述，与内容/多模态质量评测根据地缺乏可说明的桥梁，且无新能力或新方法的实验证据</span></div></div>
+<footer>迁移日报 · 既相关，又开放 · 由雷达管线自动生成<br>
+<span style="font-size:11px">卡片的收藏/线索/追踪/忽略与校准状态保存在本设备浏览器；反馈闭环（影响明日选稿）将在 V2 接通。</span></footer>
+<script>
+const KEY='md-ops-v1';
+let st={};try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}};
+document.querySelectorAll('.card').forEach(card=>{
+  const ops=card.querySelector('.ops');if(!ops)return;
+  const cid=ops.dataset.cid, rec=st[cid]=st[cid]||{}, calib=card.querySelector('.calib');
+  const sync=()=>{
+    ops.querySelectorAll('[data-op]').forEach(b=>b.classList.toggle('on',!!rec[b.dataset.op]));
+    card.classList.toggle('muted',!!rec.muted);
+    calib.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',(rec.tags||[]).includes(c.dataset.tag)));
+  };
+  ops.querySelectorAll('[data-op]').forEach(b=>b.addEventListener('click',()=>{
+    rec[b.dataset.op]=!rec[b.dataset.op];save();sync();}));
+  const tg=ops.querySelector('.calib-tg');let open=false;
+  tg.addEventListener('click',()=>{open=!open;
+    calib.style.maxHeight=open?calib.scrollHeight+'px':'0px';
+    tg.textContent=open?'收起校准 ▾':'校准这条 ▸';});
+  calib.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
+    const t=c.dataset.tag;rec.tags=rec.tags||[];
+    rec.tags=rec.tags.includes(t)?rec.tags.filter(x=>x!==t):[...rec.tags,t];save();sync();}));
+  sync();
+});
+</script>
+</body></html>
